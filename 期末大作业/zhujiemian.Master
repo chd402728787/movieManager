@@ -1,0 +1,60 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="zhujiemian.master.cs" Inherits="期末大作业.zhujiemian" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="referrer" content="no-referrer">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<link href="css/movieSystem.css" rel="stylesheet" />
+<body>
+    <form id="form1" runat="server">
+        <asp:LinkButton ID="btnIndex" runat="server" BorderColor="White" BorderWidth="10px" Font-Names="幼圆" Font-Size="24pt" ForeColor="#3399FF" style="text-decoration:none;" OnClick="btnIndex_Click">影片管理系统</asp:LinkButton>
+        <br />
+        <asp:Menu ID="movieMenu" runat="server" BackColor="#3399FF" DynamicEnableDefaultPopOutImage="False" Font-Strikeout="False" ForeColor="White" Height="40px" Orientation="Horizontal" RenderingMode="Table" Width="100%" BorderColor="#3399FF" BorderWidth="5px" Font-Names="幼圆">
+            <DataBindings>
+                <asp:MenuItemBinding DataMember="SiteMapNode" />
+            </DataBindings>
+            <Items>
+                <asp:MenuItem Text="首页" Value="首页" NavigateUrl="~/index.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="选电影" Value="选电影" NavigateUrl="~/chooseMovie.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="排行榜" Value="排行榜" NavigateUrl="~/list.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="管理员" Value="管理员" NavigateUrl="~/Admin.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="打赏" Value="打赏" NavigateUrl="~/money.aspx"></asp:MenuItem>
+            </Items>
+        </asp:Menu>
+            <br />
+            <div id="iframe">
+                <div id ="leftColumn">
+                    <center>
+                    <div id="login" >登录框</div>
+                    <div id="imgdiv">
+                    <asp:Image ID="Image1" runat="server" ImageUrl="~/images/头像.jpg" Width="100px" Height="100px" />
+                    </div><asp:Label ID="lbl1" runat="server" Text="用户名：" Font-Names="幼圆"></asp:Label>
+                        <br />
+                        <asp:Label ID="lblName" runat="server" Text=""></asp:Label>
+                        <br />
+                    </center>
+
+                </div>
+                <div id ="rightColumn">
+                    <asp:SiteMapPath ID="SiteMapPath1" runat="server" Font-Names="幼圆" ForeColor="#3399FF">
+                    </asp:SiteMapPath>
+                    <br />
+                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+
+                <div id="footer" style="font-family: 幼圆; font-size: 16px; color: white;">版权所有：陈洪栋<br />
+                    联系方式：402728787@qq.com</div>
+            </div>        
+
+        <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+
+    </form>
+</body>
+</html>

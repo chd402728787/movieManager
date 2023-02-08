@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="~/index.aspx" title="首页"  description="主页">
+    <siteMapNode url="~/chooseMovie.aspx" title="选电影"  description="">
+      <siteMapNode url="~/movieContent.aspx" title="影片内容"></siteMapNode>
+    </siteMapNode>
+    <siteMapNode url="~/list.aspx" title="排行榜"  description="" >
+    </siteMapNode>
+    <siteMapNode url="~/Admin.aspx" title="管理员"  description="" >
+      <siteMapNode url="~/Admin_change.aspx" title="数据修改">
+        <siteMapNode url="~/Admin_movieAdd.aspx" title="添加电影"></siteMapNode>
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode url="~/money.aspx" title="打赏"  description="" >
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>
+
